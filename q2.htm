@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>q2</title>
+	<style type="text/css">
+		#nature{
+			position: absolute;
+			margin-top:30px;
+			margin-left: 200px;
+		}
+		#baby{
+			position: absolute;
+			
+		}
+	</style>
+</head>
+<body>
+<img src="nature.jpg" id="nature" onclick="change(id)" width="90%" height="90%">
+<img src="baby.jpg" id="baby" onclick="change(id)" width="90%" height="90%">
+<script type="text/javascript">
+	function change(id){
+		if(id=="nature"){
+			document.getElementById("nature").style.zIndex=50;
+			document.getElementById("baby").style.zIndex=0;
+		}else{
+			document.getElementById("nature").style.zIndex=0;
+			document.getElementById("baby").style.zIndex=50;
+		}
+	}
+</script>
+</body>
+</html>

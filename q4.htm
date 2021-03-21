@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>q4</title>
+<style>
+#div1 {
+  width: 220px;
+  height: 120px;
+  padding: 10px;
+  border: 3px solid yellow;
+}
+</style>
+<script>
+function Drop(sa) {
+  sa.preventDefault();
+}
+
+function Dragit(sa) {
+  sa.dataTransfer.setData("text", sa.target.id);
+}
+
+function dropp(sa) {
+  sa.preventDefault();
+  var data = sa.dataTransfer.getData("text");
+  sa.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the image  to the rectangle box</p>
+
+
+<div id="div1" ondrop="dropp(event)" ondragover="Drop(event)"></div>
+<br>
+<img id="drag1" src="baby.jpg" draggable="true" ondragstart="Dragit(event)" width="220" height="120">
+<p  id="myid">this is a sentence.</p>
+<button type="button" onclick="myfunction()">click to change the font</button>
+<script type="text/javascript">
+	function myfunction(){
+	document.getElementById("myid").style.fontFamily="serif";
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>q5</title>
+	<script type="text/javascript">
+		function form_validation() {
+         var a=document.forms["myform"]["fullname"].value;
+         if (a=="") {
+         	alert("your must enter your name!!!!");
+         	return false;
+         }
+		}
+	</script>
+</head>
+<body>
+<form name="myform" onsubmit="return form_validation()">
+	Name:<input type="text" name="fullname">
+<input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
